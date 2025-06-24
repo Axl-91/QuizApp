@@ -4,10 +4,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -83,12 +81,11 @@ fun LearnScreen(navController: NavController) {
                     ) {
                         val offsetX = if (index % 2 == 0) (-80).dp else 80.dp
 
-                        ModuleCircle(
+                        CircleButton(
                             module = module,
-                            modifier = Modifier.offset(x = offsetX)
-                        ) {
-                            navController.navigate("quiz/${module.id}")
-                        }
+                            modifier = Modifier.offset(x = offsetX),
+                            onClick = { navController.navigate("quiz/${module.id}") }
+                        )
                     }
                 }
             }
