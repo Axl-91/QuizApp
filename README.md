@@ -1,3 +1,5 @@
 # QuizApp
 
-Simple QuizApp with Kotlin/Android for testing propourses
+Simple QuizApp with Kotlin/Android
+
+Created mostly as a testground
